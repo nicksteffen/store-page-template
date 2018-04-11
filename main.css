@@ -1,0 +1,80 @@
+body {
+    display:grid;
+    grid-template-columns:100vw 0vw;
+    grid-template-rows: 10vh 40vh 40vh 80vh 40vh 10vh;
+}
+.header {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+
+    z-index:1000;
+    grid-row:1/2;
+}
+
+.logo {
+    background-color:aliceblue;
+}
+
+.banner-image {
+    background-color:rgba(122,122,122,.9);
+    color: rgba(255,255,255,.6);
+    grid-row:2/3;
+
+
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.featured-item {
+    grid-row:3/4;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:rgba(33,44,55,1);
+}
+
+.featured-item div{
+    max-height:100%;
+    max-width:100%;
+}
+
+.feature-image {
+    background-color:violet;
+    padding:10%;
+}
+
+
+img{
+    max-height:100%;
+    max-width:100%;
+    width:100%;
+    height:100%;
+}
+
+
+.catalog {
+    grid-row:4/5;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item {
+    border-style:solid;
+    border-color:rgba(52,25,104,1);
+}
+
+
+
+.slide-show {
+    grid-row:5/6;
+    background-color:rgba(22,150,22,1);
+
+}
+
+
+footer {
+    grid-row:6/7;
+    background-color:rgba(100,22,35,1);
+}
