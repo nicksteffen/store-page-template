@@ -7,7 +7,7 @@
   <body>
 
     <div class="header">
-      <div class="logo"></div>
+      <div class="logo">Providence Starving Artist</div>
       <div></div>
       <div></div>
     </div>
@@ -19,36 +19,99 @@
 
     <div class="featured-item">
       <div class="feature-image">
-        <img src="dummy">
+        <img src="image-four.jpg">
       </div>
-      <div class="feature-text">Prints made to order</div>
+      <div class="feature-text">
+        <h1>Prints made to order</h1>
+        <p>
+          Prints of the local area made on a per order basis.
+          These are a great was to add to your art collection (or to start one!)
+          and fit any budget! Ask about custom prints, or suggest a local
+          landmark you'd love to see!.
+        </p>
+      </div>
     </div>
     <div class="catalog">
+      <h1 class="title"> Featured Works </h1>
       <div class="item item-one ">
-        <img>
+        <img src="image-one.jpg">
         <p> Item One </P>
       </div>
       <div class="item item-two">
-        <img>
+        <img src="image-two.jpg">
         <p> Item Two </P>
       </div>
       <div class="item item-three">
-        <img>
+        <img src="image-three.jpg">
         <p> Item Three </P>
       </div>
       <div class="item item-four">
-        <img>
+        <img src="image-four.jpg">
         <p> Item Four </P>
       </div>
     </div>
 
     <div class="slide-show">
 
+      <div class="mySlides">
+        <img src="image-one.jpg">
+        <h1> Slide One </h1>
+        <p> This is the text for slide one </p>
+      </div>
+
+      <div class="mySlides">
+        <img src="image-two.jpg">
+        <h1> Slide Two </h1>
+        <p> This is the text for slide two </p>
+      </div>
+      <div class="mySlides">
+        <img src="image-three.jpg">
+        <h1> Slide Three </h1>
+        <p> This is the text for slide three </p>
+      </div>
+
+      <div class="slide-buttons">
+        <button class="slide-button" onclick="currentDiv(1)"></button>
+        <button class="slide-button" onclick="currentDiv(2)"></button>
+        <button class="slide-button" onclick="currentDiv(3)"></button>
+      </div>
 
     </div>
 
     <footer>
     </footer>
+
+    <script type="text/javascript">
+      var slideIndex = 0;
+      carousel();
+
+      function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";
+                      }
+                      slideIndex++;
+                      if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 6000); // Change image every 2 seconds
+        }
+
+        function currentDiv(n) {
+        showDivs(slideIndex=n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+                for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";
+                                }
+                                x[slideIndex-1].style.display = "block";
+                                }
+    </script>
   </body>
 
 </html>
